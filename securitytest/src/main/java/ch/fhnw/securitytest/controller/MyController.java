@@ -15,4 +15,9 @@ public class MyController {
         return new ResponseEntity<>("Everyone can view this content.", HttpStatus.OK);
     }
     
+    @GetMapping("/safe")
+public ResponseEntity<String> showSafeContent() {
+return new ResponseEntity<>("Only a token bearer can view this content", HttpStatus.OK);
+}
+
 }
